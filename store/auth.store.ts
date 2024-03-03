@@ -6,12 +6,13 @@ interface IAuthStore {
   status: boolean;
 }
 
-const defaultValue: { user: IAuthStore } = {
+const defaultValue: { user: IAuthStore, isInvalid:boolean } = {
   user: {
     email: "",
     name: "",
     status: false,
   },
+  isInvalid: false
 };
 
 export const useAuthStore = defineStore("auth", {
