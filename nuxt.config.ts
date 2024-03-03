@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/image",'nuxt-icon', '@nuxtjs/tailwindcss','shadcn-nuxt',['@nuxtjs/google-fonts', {
+  modules: ["@nuxt/image", '@pinia/nuxt', 'nuxt-icon', '@nuxtjs/tailwindcss','shadcn-nuxt',['@nuxtjs/google-fonts', {
     families: {
       Lato: {
         wght: [300, 400, 700],
@@ -18,6 +18,9 @@ export default defineNuxtConfig({
       },
     },
   },], ],
+  pinia: {
+    storesDirs: ['./store/**'],
+  },
   shadcn: {
     prefix: 'Ui',
     componentDir: './components/ui'
